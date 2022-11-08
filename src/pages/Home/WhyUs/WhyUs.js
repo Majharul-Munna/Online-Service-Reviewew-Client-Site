@@ -3,7 +3,7 @@ import React from 'react';
 const WhyUs = () => {
     return (
         <div className=' mb-5'>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen rounded-lg bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src="https://img.pikbest.com/01/31/12/73z888piCd4C.jpg-0.jpg!bw700" alt='' className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
