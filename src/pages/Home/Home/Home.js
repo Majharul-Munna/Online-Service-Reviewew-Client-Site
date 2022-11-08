@@ -6,7 +6,6 @@ import WhyUs from '../WhyUs/WhyUs';
 const Home = () => {
     return (
         <div>
-            <h2>this is home</h2>
             <Header></Header>
             <TopRated></TopRated>
             <WhyUs></WhyUs>

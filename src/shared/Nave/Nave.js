@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../logo/review-logo.jpg';
 
 const Nave = () => {
     return (
@@ -14,7 +15,9 @@ const Nave = () => {
                         <li><Link>Blog</Link></li>
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl text-white"><span className=' bg-rose-700 pr-2 pl-3 py-2 rounded-md'> Review</span> <span className='bg-purple-700 pl-2 pr-3 py-2 rounded-md'>Viewer</span></Link>
+                <Link className="btn btn-ghost normal-case text-xl text-white">
+                    <img className=' h-8 w-8 mr-14 rounded-full' src={logo} alt="" />
+                    <span className=' bg-rose-700 pr-2 pl-3 py-2 rounded-md'> Review</span> <span className='bg-purple-700 pl-2 pr-3 py-2 rounded-md'>Viewer</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
