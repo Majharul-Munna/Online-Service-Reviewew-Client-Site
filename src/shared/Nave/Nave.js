@@ -26,7 +26,7 @@ const Nave = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link className="btn bg-red-500">LogIn</Link>
+                <Link to='/login' className="btn bg-rose-700">LogIn</Link>
             </div>
         </div>
     );
