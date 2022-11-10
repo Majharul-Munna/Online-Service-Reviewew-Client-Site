@@ -18,7 +18,7 @@ const Reviews = () => {
             email
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://review-viewer-50.web.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -34,8 +34,11 @@ const Reviews = () => {
                 }
             })
             .catch(err => console.error(err));
-    }
 
+            
+    }
+ 
+    
     return (
         <div className=' mt-10 mb-10'>
             <div className='flex justify-center'>

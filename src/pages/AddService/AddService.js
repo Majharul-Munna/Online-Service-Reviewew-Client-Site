@@ -11,17 +11,17 @@ const AddService = () => {
         
         const title = form.title.value;
         const price = form.price.value;
-        const url = form.url.value;
+        const img = form.url.value;
         const description = form.description.value;
 
         const services = {
             title,
             price,
-            url,
+            img,
             description
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://review-viewer-50.web.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
