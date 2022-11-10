@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Service from '../../shared/Service/Service';
 
-const Services = () => {
+const AllServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -11,7 +11,7 @@ const Services = () => {
     }, [])
     return (
         <div className='mt-10'>
-            <h1 className=' text-purple-700 font-semibold text-5xl mb-4' >Services That We Have !!</h1>
+            <h1 className=' text-purple-700 font-semibold text-5xl mb-4' >All Services !!</h1>
             <div className=' grid gap-4 grid-flow-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     services.map(service => <Service
@@ -19,10 +19,9 @@ const Services = () => {
                         service={service}
                     ></Service>)
                 }
-                <button  className="btn btn-primary mt-5 bg-rose-600 float-right"> <Link to='/services'>See All</Link></button>
             </div>
         </div>
     );
 };
 
-export default Services;
+export default AllServices;

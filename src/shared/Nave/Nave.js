@@ -1,8 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../logo/review-logo.jpg';
+import { useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/Authprovider/Authprovider';
+
 
 const Nave = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handelLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
+    let [changeText, setChangeText] = useState(true);
+    const handleChange = () => {
+        setChangeText(!changeText);
+    }
+
     return (
         <div className="navbar bg-base-300">
             <div className="navbar-start">
@@ -16,17 +33,40 @@ const Nave = () => {
                     </ul>
                 </div>
                 <Link className="btn btn-ghost normal-case text-xl text-white">
-                    <img className=' h-8 w-8 mr-14 rounded-full' src={logo} alt="" />
+                    
                     <span className=' bg-rose-700 pr-2 pl-3 py-2 rounded-md'> Review</span> <span className='bg-purple-700 pl-2 pr-3 py-2 rounded-md'>Viewer</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/blog'>Blog</Link></li>
+                    {
+                        user?.uid
+                            ?
+                            <>
+                                <ul className="menu menu-horizontal p-0" >
+                                    <li><Link to='/allreviews'>My Reviews</Link></li>
+                                    <li><Link to='/addedservice'>Add Service</Link></li>
+                                </ul>
+                            </>
+                            :
+                            <> </>
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className="btn bg-rose-700">LogIn</Link>
+                {
+                    user?.uid
+                        ?
+                        <>
+                            <div className='mr-5 flex'>
+                                {user?.photoURL ? <img className="h-7 w-7 ml-2 rounded-full" src={user.photoURL}  ></img> : <p></p>}
+                            </div>
+                            <Link onClick={handelLogOut} to='' className="btn bg-rose-700 ml-5">Log Out</Link>
+                        </>
+                        :
+                        <Link to='/login' className="btn bg-rose-700">LogIn</Link>
+                }
             </div>
         </div>
     );
