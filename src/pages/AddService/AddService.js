@@ -21,7 +21,7 @@ const AddService = () => {
             description
         }
 
-        fetch('https://review-viewer-50.web.app/services', {
+        fetch('http://localhost:5000/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -8,7 +8,7 @@ const TotalReviews = () => {
 
 
     useEffect( () =>{
-        fetch(`https://review-viewer-50.web.app/alllreviews`)
+        fetch(`http://localhost:5000/alllreviews`)
         .then(res => res.json())
         .then(data =>setReview(data))
     }, [])

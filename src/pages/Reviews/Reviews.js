@@ -18,7 +18,7 @@ const Reviews = () => {
             email
         }
 
-        fetch('https://review-viewer-50.web.app/reviews', {
+        fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

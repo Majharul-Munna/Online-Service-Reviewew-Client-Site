@@ -12,9 +12,9 @@ const x=[reviewd]
  console.log(agree)
  if(agree)
  {
-   // console.log(`deleting user id :  `,r._id)
+   
   
-   fetch(`https://review-viewer-50.web.app/allreviews/${r._id}`,{
+   fetch(`http://localhost:5000/allreviews/${r._id}`,{
     method:'DELETE'
    })
    .then(res=>res.json())

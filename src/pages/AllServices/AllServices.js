@@ -5,7 +5,7 @@ import Service from '../../shared/Service/Service';
 const AllServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://review-viewer-50.web.app/services')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
