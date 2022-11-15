@@ -18,7 +18,7 @@ const Reviews = () => {
             email
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://review-server-five.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -27,7 +27,7 @@ const Reviews = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.acknowledged) {
                     alert('Review Posted')
                     form.reset();

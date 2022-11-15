@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Myreview = ({r,reviewd}) => {
 
-    console.log('This is reviewd :',reviewd)
+    // console.log('This is reviewd :',reviewd)
     const [review, setReview] = useState([]);
     console.log(r)
 
@@ -14,7 +14,7 @@ const x=[reviewd]
  {
    
   
-   fetch(`http://localhost:5000/allreviews/${r._id}`,{
+   fetch(`https://review-server-five.vercel.app/allreviews/${r._id}`,{
     method:'DELETE'
    })
    .then(res=>res.json())

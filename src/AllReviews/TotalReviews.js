@@ -8,7 +8,7 @@ const TotalReviews = () => {
 
 
     useEffect( () =>{
-        fetch(`http://localhost:5000/alllreviews`)
+        fetch(`https://review-server-five.vercel.app/alllreviews`)
         .then(res => res.json())
         .then(data =>setReview(data))
     }, [])

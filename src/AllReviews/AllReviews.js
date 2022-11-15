@@ -8,14 +8,14 @@ const AllReviews = () => {
 
 
     useEffect( () =>{
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`https://review-server-five.vercel.app/reviews?email=${user?.email}`)
         .then(res => res.json())
         .then(data =>setReview(data))
     }, [user?.email])
  console.log(user)
 
- console.log('review :',review)
- console.log(typeof(review))
+//  console.log('review :',review)
+//  console.log(typeof(review))
     
     return (
         <div>

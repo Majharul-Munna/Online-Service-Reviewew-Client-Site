@@ -21,7 +21,7 @@ const AddService = () => {
             description
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://review-server-five.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -30,7 +30,7 @@ const AddService = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.acknowledged) {
                     alert('Review Posted')
                     form.reset();
