@@ -8,6 +8,7 @@ import Main from "../../pages/layout/Main";
 import Login from "../../pages/Login/Login";
 import Reviews from "../../pages/Reviews/Reviews";
 import SignUp from "../../pages/SignUp/SignUp";
+import Image from "../../shared/Service/Image";
 
 const router = createBrowserRouter([
     {

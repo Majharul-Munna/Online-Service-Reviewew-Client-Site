@@ -60,7 +60,7 @@ const Nave = () => {
                         ?
                         <>
                             <div className='mr-5 flex'>
-                                {user?.photoURL ? <img className="h-7 w-7 ml-2 rounded-full" src={user.photoURL}  ></img> : <p></p>}
+                                {user?.photoURL ? <img className="h-7 w-7 ml-2 rounded-full" src={user.photoURL} alt={user.displayName}  ></img> : <p></p>}
                             </div>
                             <Link onClick={handelLogOut} to='' className="btn bg-rose-700 ml-5">Log Out</Link>
                         </>

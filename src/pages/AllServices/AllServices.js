@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Service from '../../shared/Service/Service';
 
 const AllServices = () => {
     const [services, setServices] = useState([]);
-    console.log(services);
+    // console.log(services);
     useEffect(() => {
         fetch('https://review-server-five.vercel.app/services')
             .then(res => res.json())

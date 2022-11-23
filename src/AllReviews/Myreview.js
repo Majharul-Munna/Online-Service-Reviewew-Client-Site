@@ -30,11 +30,7 @@ const x=[reviewd]
 
     }
     return (
-        
- 
-
-
-    <tbody>
+        <tbody>
      
       <tr>
      {/* <th>{}</th> */}
@@ -45,10 +41,7 @@ const x=[reviewd]
                     </button></td>
       
       </tr>
-  
-
-     
-      </tbody>
+  </tbody>
   
     );
 };
